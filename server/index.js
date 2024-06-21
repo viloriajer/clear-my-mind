@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
+app.use(express.static("public"));
 
 dotenv.config();
 
@@ -19,9 +20,8 @@ app.get("/activity", async function (req, res) {
 	res.send(result);
 });
 
-app.get("/", function (req, res) {
-	res.sendFile(path.join(__dirname, "../index.html"));
-});
-app.listen(process.env.PORT, function () {
-	console.log(`clear-my-mind app listening on port ${process.env.PORT}!`);
+app.listen(process.env.SERVER_PORT, function () {
+	console.log(
+		`clear-my-mind app listening on port ${process.env.SERVER_PORT}!`
+	);
 });
