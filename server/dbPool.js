@@ -22,7 +22,8 @@ export const query = async (queryString) => {
 
 	const [result] = await connection.query(queryString);
 
-	pool.releaseConnection();
+	pool.releaseConnection(connection);
+	connection.release();
 
 	return result;
 };
