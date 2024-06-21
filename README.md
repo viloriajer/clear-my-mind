@@ -1,13 +1,15 @@
 # Clear My Mind
 
 The goal of this project is to create a small web page that will generate a random task
-that can give you an idea of what to do if you're feeling overwhelmed.
+that can give you an idea of what you can do if you're feeling overwhelmed.
 
 ## Tech Stack
 
-Vanilla JS, HTML, Express, MySQL
+Javascript, HTML, Express, MySQL
 
-## MYSQL SETUP
+## SETUP
+
+If you want to set this up locally you can do so by first creating and populating the database using these queries.
 
 ```mysql
 CREATE DATABASE clearMyMind;
@@ -26,3 +28,7 @@ IGNORE 1 LINES
 (activity);
 
 ```
+
+Dont forget to modify the `example.env` file to match your machines ports and rename the file to `.env`.
+
+Once that is complete you can run `npm install` and then `npm dev` to run.
