@@ -29,6 +29,6 @@ IGNORE 1 LINES
 
 ```
 
-Dont forget to modify the `example.env` file to match your machines ports and rename the file to `.env`.
+Dont forget to modify the `example.env` file for your database credentials and desired port and rename the file to `.env`.
 
 Once that is complete you can run `npm install` and then `npm dev` to run.
